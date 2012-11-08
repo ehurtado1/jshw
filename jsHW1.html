@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <script type='text/javascript'>
+    	var spending = [
+    {
+        "name": "clothing",
+        "amount": "17.32"
+    },
+    {
+        "name": "lunch with mom",
+        "amount": "39.84"
+    },
+    {
+        "name": "gas",
+        "amount": "24.5"
+    },
+    {
+        "name": "groceries",
+        "amount": "67.22"
+    },
+    {
+        "name": "movie ticket",
+        "amount": "9.9"
+    },
+    {
+        "name": "toothbrush",
+        "amount": "4.65"
+    }
+];
+
+      function findMax(a){ 
+        	var max = Number.NEGATIVE_INFINITY;
+        	var name = "";
+        	for(var i = 1; i < spending.length; i++) {
+        		var currentAmount = parseFloat(spending[i].amount);
+        		if(currentAmount > max){
+        			max = currentAmount;
+        			name = spending[i].name;
+        		}
+        	} 
+        	return name;
+      } 
+      
+      console.log(findMax("Sorry, there are no items. Max value doesn't exist."));
+      
+      function findTotal(){
+      	var total = 0;
+      	for(var i = 0; i < spending.length; i++) {
+      		total += parseFloat(spending[i].amount);
+      	}
+      	return total;
+      }
+      
+      console.log(findTotal());
+      
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
